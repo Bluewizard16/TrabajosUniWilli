@@ -3,57 +3,58 @@ import java.util.Scanner;
 public class estcod{
 
     public static void main(String[] args){
-        // Variables (res = resultado, num1 = numero 1, s = Scaner[para obtener datos del teclado])
-        int res, num1, opt, value, log;
         Scanner s = new Scanner(System.in);
+        int opt, men;
+        String usr, psw;
 
-        System.out.println("Bienvenido! \n" + 
-                            "Selecciona UNA opción \n" + 
-                            "1. Acceder \n"+
-                            "2. Acerca de \n" + 
-                            "3. Salir");
-        log = s.nextInt();
+        System.out.println("Bienvenido!");
+        do {
+            System.out.println("1. Acceder \n" +
+                                "2. Acerca de \n" +
+                                "3. Salir");
+            opt = s.nextInt();
 
-        switch (log) {
-            case 1: // Loggin
-                System.out.println("Digite su usuario: ");
-                String usr;
-                usr = s.next();
+            switch (opt) {
+                case 1:
+                        System.out.println("Digite el usuario:");
+                        usr = s.next();
 
-                if (usr.equals("willisss")) {
-                    System.out.println("User correcto, digite su contraseña: ");
-                    String psw;
-                    psw = s.next();
-                    if (psw.equals("123yope")) {
-                        System.out.println("digita un numero diferente de 3");
-                        opt = s.nextInt();
+                        if (usr.equals("willisss")) {
+                            System.out.println("Usuario corrercto, digite la contraseña:");
+                            psw = s.next();
+                            if (psw.equals("1234")) {
+                                System.out.println("Contraseña correcta.");
+                                do {
+                                    System.out.println("Selecciona una opción. \n" +
+                                                        "1. Suma.\n" + 
+                                                        "2. Resta \n" + 
+                                                        "3. Multiplicación \n");
+                                    men = s.nextInt();
 
-                        do {
-                            switch (opt) {
-                                case 1:
-                                    System.out.println("nonas");
-                                    break;
-                            
-                                default:
-                                    break;
+                                    switch (men) {
+                                        case 1:
+                                            System.out.println("Digite su primer dígito");
+                                            int num1;
+                                            num1 = s.nextInt();
+                                            System.out.println("Digite su segundo número");
+                                            break;
+                                    
+                                        default:
+                                            break;
+                                    }
+
+                                } while (men != 5);
                             }
-                        } while (opt < 3);
-                        System.out.println("Vuelve pronto");
-                        s.close();
+                        }else{
+                            System.out.println("Usuario incorrecto.");
+                        }
+                    break;
+            
+                default:
+                    break;
+            }
 
-                    }else{
-                        System.out.println("Contraseña incorrecta.");
-                    }
-                }else{
-                    System.out.println("Usuario no encontrado en la base de datos.");
-                }
-                break;
-            case 2: // About
-                System.out.println("Programa realizado para la exposición.");
-                break;
-            default:
-                System.out.println("Gracias por visitarnos :).");
-                break;
-        }
+        } while (opt != 3);
+        System.out.println("Gracias por preferirnos");
     }
 }
