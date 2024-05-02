@@ -15,7 +15,7 @@ public class estcod{
             opt = s.nextInt();
 
             switch (opt) {
-                case 1:
+                    case 1:
                         System.out.println("\nDigite el usuario:");
                         usr = s.next();
 
@@ -30,7 +30,7 @@ public class estcod{
                                                         "2. Resta. \n" + 
                                                         "3. Multiplicación. \n" +
                                                         "4. Resta\n" + 
-                                                        "5. Factorial\n." +
+                                                        "5. Factorial\n" +
                                                         "6. Salir");
                                     men = s.nextInt();
 
@@ -87,9 +87,9 @@ public class estcod{
                                             for(int i = 1; i<=num1 ; i++){
                                                 factorial *= i;
                                             }
-                                            System.out.println("****************************************");
-                                            System.out.println("El resultado del factorial es: " + factorial);
-                                            System.out.println("****************************************");
+                                            System.out.println("*******************************************");
+                                            System.out.println("El factorial de 12 es: 12!= " + factorial);
+                                            System.out.println("*******************************************");
                                         break;
 
                                         default:
@@ -102,8 +102,12 @@ public class estcod{
                             System.out.println("Usuario incorrecto.");
                         }
                     break;
-            
-                default:
+
+                    case 2:
+                        System.out.println("Este programa fue realizado para fines educativos.");
+                    break;
+
+                    default:
                     break;
             }
 
