@@ -9,14 +9,14 @@ public class estcod{
 
         System.out.println("Bienvenido!");
         do {
-            System.out.println("1. Acceder \n" +
+            System.out.println("\n1. Acceder \n" +
                                 "2. Acerca de \n" +
                                 "3. Salir");
             opt = s.nextInt();
 
             switch (opt) {
                 case 1:
-                        System.out.println("Digite el usuario:");
+                        System.out.println("\nDigite el usuario:");
                         usr = s.next();
 
                         if (usr.equals("willisss")) {
@@ -25,25 +25,78 @@ public class estcod{
                             if (psw.equals("1234")) {
                                 System.out.println("Contraseña correcta.");
                                 do {
-                                    System.out.println("Selecciona una opción. \n" +
+                                    System.out.println("\nSelecciona una opción. \n" +
                                                         "1. Suma.\n" + 
-                                                        "2. Resta \n" + 
-                                                        "3. Multiplicación \n");
+                                                        "2. Resta. \n" + 
+                                                        "3. Multiplicación. \n" +
+                                                        "4. Resta\n" + 
+                                                        "5. Factorial\n." +
+                                                        "6. Salir");
                                     men = s.nextInt();
 
+                                    int num1, num2, result, factorial = 1;
+
                                     switch (men) {
-                                        case 1:
-                                            System.out.println("Digite su primer dígito");
-                                            int num1;
+                                        case 1: //SUMA
+                                            System.out.println("\nDigite su primer dígito");
                                             num1 = s.nextInt();
                                             System.out.println("Digite su segundo número");
+                                            num2 = s.nextInt();
+                                            result = num1 + num2;
+                                            System.out.println("******************************");
+                                            System.out.println("El resultado de la suma es: " + result);
+                                            System.out.println("******************************");
                                             break;
                                     
+                                        case 2: //RESTA
+                                            System.out.println("\nDigite su primer dígito");
+                                            num1 = s.nextInt();
+                                            System.out.println("Digite su segundo número");
+                                            num2 = s.nextInt();
+                                            result = num1 - num2;
+                                            System.out.println("*********************************");
+                                            System.out.println("El resultado de la resta es: " + result);
+                                            System.out.println("*********************************");
+                                        break;
+
+                                        case 3: //MULTIPLICACIÓN
+                                            System.out.println("\nDigite su primer dígito");
+                                            num1 = s.nextInt();
+                                            System.out.println("Digite su segundo número");
+                                            num2 = s.nextInt();
+                                            result = num1 * num2;
+                                            System.out.println("****************************************");
+                                            System.out.println("El resultado de la multiplicación es: " + result);
+                                            System.out.println("****************************************");
+                                        break;
+
+                                        case 4: //DIVISIÓN
+                                            System.out.println("\nDigite su primer dígito");
+                                            num1 = s.nextInt();
+                                            System.out.println("Digite su segundo número");
+                                            num2 = s.nextInt();
+                                            result = num1 / num2;
+                                            System.out.println("*************************************");
+                                            System.out.println("El resultado de la división es: " + result);
+                                            System.out.println("*************************************");
+                                        break;
+
+                                        case 5://FACTORIAL
+                                            System.out.println("\nDigita el número al cual deseas sacar su factorial");
+                                            num1 = s.nextInt();
+                                            for(int i = 1; i<=num1 ; i++){
+                                                factorial *= i;
+                                            }
+                                            System.out.println("****************************************");
+                                            System.out.println("El resultado del factorial es: " + factorial);
+                                            System.out.println("****************************************");
+                                        break;
+
                                         default:
                                             break;
                                     }
 
-                                } while (men != 5);
+                                } while (men != 6);
                             }
                         }else{
                             System.out.println("Usuario incorrecto.");
