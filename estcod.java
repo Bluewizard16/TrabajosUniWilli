@@ -29,7 +29,7 @@ public class estcod{
                                                         "1. Suma.\n" + 
                                                         "2. Resta. \n" + 
                                                         "3. Multiplicación. \n" +
-                                                        "4. Resta\n" + 
+                                                        "4. División\n" + 
                                                         "5. Factorial\n" +
                                                         "6. Salir");
                                     men = s.nextInt();
@@ -88,7 +88,8 @@ public class estcod{
                                                 factorial *= i;
                                             }
                                             System.out.println("*******************************************");
-                                            System.out.println("El factorial de 12 es: 12!= " + factorial);
+                                            System.out.println("El factorial de "+ num1 + " es: "+ num1 +"!= " + factorial);
+
                                             System.out.println("*******************************************");
                                         break;
 
@@ -97,6 +98,8 @@ public class estcod{
                                     }
 
                                 } while (men != 6);
+                            }else{
+                                System.out.println("Contraseña incorrecta.");
                             }
                         }else{
                             System.out.println("Usuario incorrecto.");
